@@ -1,5 +1,7 @@
 from flask import Flask, request
-from calorie_calculator_program import CalorieCalculator, Women, Men
+from women import Women
+from men import Men
+
 app = Flask(__name__)
 
 
