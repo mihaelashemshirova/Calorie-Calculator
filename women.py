@@ -4,9 +4,6 @@ from calorie_calculator_program import CalorieCalculator
 
 class Women(CalorieCalculator):
 
-    def __init__(self, gender, age, weight, height, girth_above_navel, girth_through_navel, hips, neck, activity, deficit_surplus):
-        super().__init__(gender, age, weight, height, girth_above_navel, girth_through_navel, hips, neck, activity, deficit_surplus)
-
     def body_fat_percent(self):
         tm_percent = 163.205 * log(self.girth_above_navel + self.hips - self.neck, 10) - 97.684 * log(self.height, 10) - 104.912
         return tm_percent
