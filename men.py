@@ -3,10 +3,7 @@ from calorie_calculator_program import CalorieCalculator
 
 
 class Men(CalorieCalculator):
-
-    def __init__(self, gender, age, weight, height, girth_above_navel, girth_through_navel, hips, neck, activity, deficit_surplus):
-        super().__init__(gender, age, weight, height, girth_above_navel, girth_through_navel, hips, neck, activity, deficit_surplus)
-
+    
     def body_fat_percent(self):
         tm_percent = 86.010 * log(self.girth_above_navel - self.neck, 10) - 70.041 * log(self.height, 10) + 30.30
         return tm_percent
